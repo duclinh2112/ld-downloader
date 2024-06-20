@@ -39,7 +39,7 @@ const HomeContainer = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <>
+        <div className="pb-8">
           {!data ? (
             <FormDownload
               setUrlVideo={setUrlVideo}
@@ -48,7 +48,7 @@ const HomeContainer = () => {
           ) : (
             <DownloadVideoInfo data={data} setData={setData} />
           )}
-        </>
+        </div>
       )}
     </>
   );

@@ -19,9 +19,9 @@ const DownloadVideoInfo = ({ data, setData }: DownloadVideoInfoProps) => {
 
   return (
     <div>
-      <div className="container mx-auto">
-        <div className="w-full flex mx-[-15px]">
-          <div className="w-[33.33%] px-[15px]">
+      <div className="max-w-[60%] w-full mx-auto max-md:px-[15px]">
+        <div className="w-full flex items-center mx-[-15px] max-md:flex-col max-md:gap-6 max-md:mx-0">
+          <div className="w-[33.33%] px-[15px] max-md:w-full max-md:px-0">
             <div className="text-center">
               <p>{data.author.nickname}</p>
               <div className="relative w-full h-[250px] mt-6">
@@ -34,9 +34,11 @@ const DownloadVideoInfo = ({ data, setData }: DownloadVideoInfoProps) => {
               </div>
             </div>
           </div>
-          <div className="w-[66.66%] px-[15px]">
+          <div className="w-[66.66%] px-[15px] max-md:w-full max-md:px-0">
             <div>
-              <h1>Thông tin tải xuống</h1>
+              <h1 className="text-[32px] font-semibold mb-4">
+                Thông tin tải xuống
+              </h1>
               <p>
                 Các tệp tải xuống, chúng thường được lưu vào thư mục tải xuống
                 bạn đã làm mặc định. Trình duyệt của bạn thường đặt thư mục này
@@ -45,22 +47,22 @@ const DownloadVideoInfo = ({ data, setData }: DownloadVideoInfoProps) => {
               </p>
               <div className="flex flex-col items-start gap-4 mt-8">
                 <button
-                  className="w-auto h-[45px] bg-primary rounded-lg text-white px-4"
+                  className="w-auto h-[45px] bg-primary rounded-lg text-white px-4 max-md:w-full"
                   onClick={() => handleDownloadVideo(data.video.url)}
                 >
-                  Download Video
+                  Tải video
                 </button>
                 <button
-                  className="w-auto h-[45px] bg-primary rounded-lg text-white px-4"
+                  className="w-auto h-[45px] bg-primary rounded-lg text-white px-4 max-md:w-full"
                   onClick={() => handleDownloadVideo(data.video.urlWithLogo)}
                 >
-                  Download Video With Logo
+                  Tải video với logo
                 </button>
                 <button
-                  className="w-auto h-[45px] bg-primary rounded-lg text-white px-4"
+                  className="w-auto h-[45px] bg-primary rounded-lg text-white px-4 max-md:w-full"
                   onClick={() => handleDownloadVideo(data.music.playUrl)}
                 >
-                  Download Audio
+                  Tải audio
                 </button>
               </div>
             </div>
@@ -71,7 +73,7 @@ const DownloadVideoInfo = ({ data, setData }: DownloadVideoInfoProps) => {
             className="w-auto h-[45px] bg-white rounded-lg text-primary px-4 border-solid border-primary border"
             onClick={() => setData(null)}
           >
-            Download Video Khác
+            Tải Video Khác
           </button>
         </div>
       </div>
