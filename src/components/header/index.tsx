@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header>
-      <nav className="w-full h-[65px] flex items-center">
+      <nav className="w-full h-[65px] flex items-center max-md:px-[15px]">
         <div className="container mx-auto">
           <a href="/" className="text-[24px] font-semibold">
             <span className="text-primary">LD</span>
