@@ -20,7 +20,7 @@ const FormDownload = ({ setUrlVideo, onDownloadVideo }: FormDownloadProps) => {
             Trình tải xuống video LD
           </h2>
           <p className="text-[28px] font-medium max-md:text-[18px]">
-            Tải xuống video tiktok trên LD trực tuyến
+            Tải xuống video tiktok, douyin trên LD trực tuyến
           </p>
         </div>
         <div className="w-full flex items-start max-md:px-2 max-md:flex-col max-md:gap-3">

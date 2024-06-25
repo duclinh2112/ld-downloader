@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "p16-sign-sg.tiktokcdn.com",
       },
+      {
+        protocol: "https",
+        hostname: "p3-pc-sign.douyinpic.com",
+      },
     ],
   },
 };

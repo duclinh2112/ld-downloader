@@ -13,14 +13,16 @@ const HomeContainer = () => {
   const handleDownloadVideo = async () => {
     const tikTokUrlRegex =
       /^.*https:\/\/(?:m|www|vm)?\.?tiktok\.com\/((?:.*\b(?:(?:usr|v|embed|user|video)\/|\?shareId=|\&item_id=)(\d+))|\w+)/;
+    
+    const douyinUrlRegex = /^https?:\/\/(?:www\.)?douyin\.com/;
 
     if (!urlVideo) {
       alert("Vui lòng nhập url cần tải");
       return;
     }
 
-    if (!tikTokUrlRegex.test(urlVideo)) {
-      alert("Vui lòng nhập url tiktok");
+    if (!tikTokUrlRegex.test(urlVideo) && !douyinUrlRegex.test(urlVideo)) {
+      alert("Vui lòng nhập url tiktok hoặc douyin");
       return;
     }
     setIsLoading(true);
@@ -30,8 +32,6 @@ const HomeContainer = () => {
       setIsLoading(false);
       setData(res);
     }
-
-    console.log(res);
   };
 
   return (
